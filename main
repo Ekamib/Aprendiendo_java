@@ -1,0 +1,62 @@
+
+package com.mycompany.laboratorio1_1226;
+
+
+public class Laboratorio1_1226 {
+
+    public static void main(String[] args) {
+        //declaracion de variables
+        String codPro1, codPro2, codPro3, codPro4, codPro5;
+        String nomPro1, nomPro2, nomPro3, nomPro4, nomPro5;
+        int cant1, cant2, cant3, cant4, cant5;
+        double precio1, precio2, precio3, precio4, precio5;
+        boolean grab1,grab2, grab3, grab4, grab5;
+        //entrada de datos
+        codPro1 = "P01";
+        codPro2 = "P02";
+        codPro3 = "P03";
+        codPro4 = "P04";
+        codPro5 = "p05";
+        
+        nomPro1 = "QUESO";
+        nomPro2 = "PAPAS";
+        nomPro3 = "MARGAR";
+        nomPro4 = "HUEVOS";
+        nomPro5 = "CHIL4";
+        
+        cant1 = 3;
+        cant2 = 2;
+        cant3 = 1;
+        cant4 = 2;
+        cant5 = 3;
+        
+        precio1 = 47.50;
+        precio2 = 8.45;
+        precio3 = 9.30;
+        precio4 = 45;
+        precio5 = 7.20;
+        
+        grab1 = false;
+        grab2 = false;
+        grab3 = true;
+        grab4 = false;
+        grab5 = true;
+        
+                
+        //proceso
+        //salida
+        System.out.println("codigo producto cantidad precio isv");
+        System.out.println("=============================================================");
+        System.out.println(codPro1 + "\t" + nomPro1 + "\t" + cant1 + "\t"+ precio1 + "\t" + grab1);
+        System.out.println(codPro2 + "\t" + nomPro2 + "\t" + cant2 + "\t"+ precio2 + "\t" + grab2);
+        System.out.println(codPro3 + "\t" + nomPro3 + "\t" + cant3 + "\t"+ precio3 + "\t" + grab3);
+        System.out.println(codPro4 + "\t" + nomPro4 + "\t" + cant4 + "\t"+ precio4 + "\t" + grab4);
+        System.out.println(codPro5 + "\t" + nomPro5 + "\t" + cant5 + "\t"+ precio5 + "\t" + grab5);
+        System.out.println("==============================================================");
+        
+        
+              
+        
+    }// fin del programa main 
+}// fin de la clase laboratorio 
+
