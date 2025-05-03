@@ -1,1 +1,1 @@
-# learningjava
+# practicing-java
