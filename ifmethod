@@ -1,0 +1,24 @@
+class Main {
+    public static void main(String[] args) {
+        int Edad = 81;
+        if (Edad<18){
+            System.out.println("Usted es un niño");
+            
+        }//fin de <18
+        if(Edad>=18 && Edad<21){
+            System.out.println("Usted es un joven");
+        }// fin de <21
+        
+        if(Edad>=21 && Edad<60){
+             System.out.println("Usted es un adulto");
+        }//fin de >=21
+        if(Edad>=60 && Edad<80){
+             System.out.println("Usted es un adulto mayor");
+        }// fin de >=60 y <80
+        if(Edad >=80 ){
+            System.out.println("Usted es un adulto de oro");
+        }// fin de >=80
+       
+    }//fin del metodo main
+
+}//fin de la clase main
