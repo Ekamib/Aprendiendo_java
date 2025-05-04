@@ -1,4 +1,5 @@
 
+
 package com.mycompany.laboratorio1_1226;
 
 
@@ -11,6 +12,11 @@ public class Laboratorio1_1226 {
         int cant1, cant2, cant3, cant4, cant5;
         double precio1, precio2, precio3, precio4, precio5;
         boolean grab1,grab2, grab3, grab4, grab5;
+        double subt1, subt2, subt3, subt4, subt5;
+        double imp1, imp2, imp3, imp4, imp5;
+        double tot1, tot2, tot3, tot4, tot5;// tp: Total a pagar
+        
+        
         //entrada de datos
         codPro1 = "P01";
         codPro2 = "P02";
@@ -42,21 +48,50 @@ public class Laboratorio1_1226 {
         grab4 = false;
         grab5 = true;
         
+        
                 
-        //proceso
+        //proceso (calculos)
+        subt1 =  precio1*cant1;
+        subt2 =  precio2*cant2;
+        subt3 =  precio3*cant3;
+        subt4 =  precio4*cant4;
+        subt5 =  precio5*cant5;
+        
+        if(grab1==true){imp1 = subt1*0.15;} else {imp1=0;}
+        if(grab2==true){imp2 = subt2*0.15;} else {imp2=0;}
+        if(grab3==true){imp3 = subt3*0.15;} else {imp3=0;}
+        if(grab4==true){imp4 = subt4*0.15;} else {imp4=0;}
+        if(grab5==true){imp5 = subt5*0.15;} else {imp5=0;}
+        
+        tot1 = subt1 + imp1;
+        tot2 = subt2 + imp2;
+        tot3 = subt3 + imp3;
+        tot4 = subt4 + imp4;
+        tot5 = subt5 + imp5;
+       
+        double tp = tot1 + tot2 + tot3 + tot4 + tot5;
+        
+        
         //salida
-        System.out.println("codigo producto cantidad precio isv");
+        String f1, f2, f3, f4, f5, f6, f7, f8, f;
+        f1="%-5s"; f2="%-15s"; f3="%-5d"; f4="%-7.2f"; f5="%-7b"; f6="%-7.2f"; f7="%-7.2f"; f8="%-7.2f";
+        f = f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8 + "\n";
+        
+        System.out.println("cod prod         cant   precio  grab   subtot   imp     Total");
         System.out.println("=============================================================");
-        System.out.println(codPro1 + "\t" + nomPro1 + "\t" + cant1 + "\t"+ precio1 + "\t" + grab1);
-        System.out.println(codPro2 + "\t" + nomPro2 + "\t" + cant2 + "\t"+ precio2 + "\t" + grab2);
-        System.out.println(codPro3 + "\t" + nomPro3 + "\t" + cant3 + "\t"+ precio3 + "\t" + grab3);
-        System.out.println(codPro4 + "\t" + nomPro4 + "\t" + cant4 + "\t"+ precio4 + "\t" + grab4);
-        System.out.println(codPro5 + "\t" + nomPro5 + "\t" + cant5 + "\t"+ precio5 + "\t" + grab5);
+        System.out.format( f, codPro1, nomPro1, cant1, precio1, grab1, subt1, imp1, tot1);
+        System.out.format( f, codPro2, nomPro2, cant2, precio2, grab2, subt2, imp2, tot2);
+        System.out.format( f, codPro3, nomPro3, cant3, precio3, grab3, subt3, imp3, tot3);
+        System.out.format( f, codPro4, nomPro4, cant4, precio4, grab4, subt4, imp4, tot4);
+        System.out.format( f, codPro5, nomPro5, cant5, precio5, grab5, subt5, imp5, tot5);
         System.out.println("==============================================================");
+        System.out.format("Total a pagar \t\t\t\t\t "+f8+ "\n", tp);
         
         
               
         
     }// fin del programa main 
 }// fin de la clase laboratorio 
+
+
 
