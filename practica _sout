@@ -1,0 +1,191 @@
+/*
+
+package com.elvis.estrellas;
+
+/**
+ *
+ * @author Dell
+
+
+
+public class Estrellas {
+
+    public static void main(String[] args) {
+         System.out.println("Coro:");
+        System.out.println("Tu bandera es un lampo de cielo,");
+        System.out.println("por un bloque de nieve cruzado;0");
+        System.out.println("y se ven en su fondo sagrado");
+        System.out.println("cinco estrellas de palido azul;");
+        System.out.println("en tu emblema, que un mar rumoroso");
+        System.out.println("con sus ondas bravias escuda,");
+        System.out.println("de un volcan tras la cima desnuda");
+        System.out.println("hay un sol de un lucero fulgor.");
+        
+// Estrofa I
+
+        System.out.println("\nESTROFA I:");
+        System.out.println("India virgen y hermosa dormias");
+        System.out.println("de tus mares al canto sonoro,");
+        System.out.println("cuando echada en tus cuencas de oro");
+        System.out.println("el audaz navegante te hallo;");
+        System.out.println("y al mirar tu belleza extasiado,");
+        System.out.println("al influjo ideal de tu encanto,");
+        System.out.println("la orla azul de tu espléndido manto");
+        System.out.println("con su beso de amor consagró.");
+        
+// Estrofa II
+
+        System.out.println("\nESTROFA II:");
+        System.out.println("De un país donde el sol se levanta,");
+        System.out.println("más allá del atlante azulado,");
+        System.out.println("aquel hombre te había soñado");
+        System.out.println("y en tu busca a la mar se lanzó.");
+        System.out.println("Cuando erguiste la pálida frente,");
+        System.out.println("en la viva ansiedad de tu anhelo,");
+        System.out.println("bajo el dombo gentil de tu cielo");
+        System.out.println("ya flotaba un extraño pendón.");
+     
+// Estrofa III
+
+        System.out.println("\nESTROFA III:");
+        System.out.println("Era inútil que el indio tu amado,");
+        System.out.println("se aprestara a la lucha con ira,");
+        System.out.println("porque envuelto en su sangre Lempira");
+        System.out.println("en la lucha con brazo tenaz,");
+        System.out.println("y de la épica hazaña en memoria,");
+        System.out.println("la historia tan sólo menciona");
+        System.out.println("una tumba que el polvo blasona,");
+        System.out.println("y que encuentra en la heróica su faz.");
+      
+// Estrofa IV
+
+        System.out.println("\nESTROFA IV:");
+        System.out.println("¡Por tres siglos tus hijos oyeron");
+        System.out.println("el mandato imperioso del amo!;");
+        System.out.println("¡por tres siglos tu inútil reclamo");
+        System.out.println("en la atmósfera azul se perdió!");
+        System.out.println("pero un día gloria tu oído");
+        System.out.println("percibió, poderoso y distante,");
+        System.out.println("que allá lejos, por sobre el Atlante,");
+        System.out.println("se escuchaba un sonoro clamor.");
+    
+// Estrofa V
+
+        System.out.println("\nESTROFA V:");
+        System.out.println("Era Francia, la libre, la heroica,");
+        System.out.println("que en su sueño de siglos dormida,");
+        System.out.println("despertaba iracunda a la vida");
+        System.out.println("al reclamo viril de Dantón;");
+        System.out.println("era ella que enviaba a la muerte");
+        System.out.println("la cabeza del rey consagrada,");
+        System.out.println("y que alzaba en su aliento sagrada");
+        System.out.println("para el mundo el derecho y razón.");
+      
+// Estrofa VI
+
+        System.out.println("\nESTROFA VI:");
+        System.out.println("¡Y tú al fin, oh país! quebrantaste");
+        System.out.println("de tu esclavo servil la cadena,");
+        System.out.println("y entre el rayo y la cruz de tu enseña,");
+        System.out.println("libertad al que alzó se miró.");
+        System.out.println("Mas tu extraña y ansiosa mirada");
+        System.out.println("tu camino otro héroe marcaba,");
+        System.out.println("y en tu pecho, cual honda alborada,");
+        System.out.println("hoy un sol inmortal se encendió.");
+     
+// Estrofa VII
+
+        System.out.println("\nESTROFA VII:");
+        System.out.println("Y al seguir por la senda de gloria");
+        System.out.println("que el honor a tus plantas depone,");
+        System.out.println("vas llevando en tu pecho el blasón");
+        System.out.println("de tu sagrado pendón tricolor.");
+        System.out.println("Y tu pueblo, que digno y altivo");
+        System.out.println("tu entereza por fin coronó,");
+        System.out.println("te dará con ardor entusiasta");
+        System.out.println("las preseas de heroico laurel.");
+  
+        // Figura A: Rombo con asteriscos
+        System.out.println("Figura A: Rombo con asteriscos\n");
+
+        System.out.println("....*....");
+        System.out.println("...***...");
+        System.out.println("..*****..");
+        System.out.println(".*******.");
+        System.out.println("*********");
+        System.out.println(".*******.");
+        System.out.println("..*****..");
+        System.out.println("...***...");
+        System.out.println("....*....");
+
+        System.out.println();
+
+        // Figura B: Estrella de 6 puntas (Estrella de David)
+        System.out.println("Figura B: Estrella de 6 puntas\n");
+
+       System.out.println("     *  ");
+        System.out.println("    * *    ");
+        System.out.println("* * * * * *");
+        System.out.println(" *  * *  * ");
+        System.out.println("  *     *  ");
+        System.out.println(" *  * *  * ");
+        System.out.println("* * * * * *");
+        System.out.println("    * *    ");
+        System.out.println("     *   ");
+        
+         System.out.println("Iniciales: E L P A\n");
+
+        // Letra E
+        System.out.println("EEEEEEEEEE");
+        System.out.println("E         ");
+        System.out.println("E         ");
+        System.out.println("E         ");
+        System.out.println("EEEEEEE   ");
+        System.out.println("E         ");
+        System.out.println("E         ");
+        System.out.println("E         ");
+        System.out.println("E         ");
+        System.out.println("EEEEEEEEEE");
+        System.out.println();
+
+        // Letra L
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("L         ");
+        System.out.println("LLLLLLLLLL");
+        System.out.println();
+
+        // Letra P
+        System.out.println("PPPPPPPPP ");
+        System.out.println("P       P ");
+        System.out.println("P       P ");
+        System.out.println("PPPPPPPPP ");
+        System.out.println("P         ");
+        System.out.println("P         ");
+        System.out.println("P         ");
+        System.out.println("P         ");
+        System.out.println("P         ");
+        System.out.println("P         ");
+        System.out.println();
+
+        // Letra A
+        System.out.println("    A     ");
+        System.out.println("   A A    ");
+        System.out.println("  A   A   ");
+        System.out.println(" A     A  ");
+        System.out.println("AAAAAAAAA ");
+        System.out.println("A       A ");
+        System.out.println("A       A ");
+        System.out.println("A       A ");
+        System.out.println("A       A ");
+        System.out.println("A       A ");
+    }//fin del main
+    
+}// fin de la clase main
+
