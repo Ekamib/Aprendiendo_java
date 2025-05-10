@@ -1,0 +1,62 @@
+
+
+package com.elvis.ciclos_x;
+
+
+public class Ciclos_x {
+    
+    public static void ejercicio1 (){
+        System.out.println("****** Ejercicio 1********");
+        for(int k=1; k<=5; k++){
+            System.out.println("Juan" + k);
+            
+        }// fin del ciclo for 
+        
+    }// fin del ejercicio 1 
+    
+    
+    public static void ejercicio2 (){
+        System.out.println("****** Ejercicio 2********");
+        int y;
+        System.out.println("x" + "\t" + "y");
+        for (int x= -3; x<=5; x++){
+            y = 3*x*x +4*x - 5;
+            System.out.println( x + "\t" + y );
+        }// fin del ciclo for 
+        System.out.println("==========================");
+    }// fin del ejercicio 2 
+    
+    public static void ejercicio3 (){
+        System.out.println("===========ejercicio 3=========");
+        int c=0;
+        for (int año=2024; año<=2025; año++){
+            System.out.println("Año:" + año);
+            for( int mes=1;  mes<=12; mes++){
+                System.out.println("Mes:" + mes);
+                    for( int dia =1;  dia<=30; dia++){
+                        System.out.print(dia + ",");
+                        c = c+1;
+                    }//fin del ciclo dia 
+                    System.out.println("");
+            
+                 }//fin del ciclo mes
+        System.out.println("===============================");
+        }// fin del ciclo año
+        System.out.println("Total de dias " + c);
+        System.out.println("================================");
+     
+    }// fin ejercicio 3 
+
+    public static void main(String[] args) {
+        ejercicio1();
+        ejercicio2();
+        ejercicio3();
+     
+       
+        
+       }//fin de la clase main 
+       
+           
+           
+    }// fin del programa main
+
