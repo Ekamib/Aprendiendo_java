@@ -1,0 +1,59 @@
+package com.elvis.metodos_1226;
+
+
+public class Metodos_1226 {
+    
+    public static void ejercicio1(){
+        System.out.println("******ejercicio1*******");
+        int x = 49; 
+        double y ; 
+        y = Math.sqrt (x);
+        System.out.println("Raiz de " + x + "=" + y);
+        System.out.println("======================");
+    }// fin del ejercicio 1
+    
+    public static void ejercicio2(){
+        System.out.println("******ejercicio2*******");
+        int x = 5; int p = 6; 
+        double y; 
+        y= Math.pow(x,p);
+        System.out.println(x+"^"+p+"="+y);
+        System.out.println("======================");
+        
+    }// fin del ejercicio 2
+    
+   public static void ejercicio3(){
+        System.out.println("******ejercicio3*******");
+        System.out.println("La suma de 57 y 84 es =" + FSuma(57,84));
+        System.out.println("======================");
+        
+    }// fin del ejercicio 3
+   public static void ejercicio4(){
+        System.out.println("******ejercicio3*******");
+        PSuma(100, 100);
+        System.out.println("======================");
+        
+    }// fin del ejercicio 2
+    
+    public static void PSuma(int a, int b){
+        int c; 
+        c = a + b; 
+         
+        System.out.println("La suma es " + c);
+    }// fin de la funcion fsuma
+    
+    public static int FSuma(int a, int b){
+        int c; 
+        c = a + b; 
+       
+        return c; 
+    }// fin de la funcion fsuma
+    
+    public static void main(String[] args) {
+        ejercicio1();
+        ejercicio2();
+        ejercicio3();
+        ejercicio4();
+       
+    }// fin del main 
+}// fin de la clase 
