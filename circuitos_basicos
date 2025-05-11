@@ -54,11 +54,16 @@ public class Laboratorio3_circuitos1226 {
     }// fin del circuito 2
     public static void PruebaCircuito2(){
         System.out.println("****Prueba del circuito******");
-        System.out.println("0  0000 =" + Circuito2(0,0,0,0));//0
-        System.out.println("1  0001 =" + Circuito2(0,0,0,1));//1
-        System.out.println("2  0010 =" + Circuito2(0,0,1,0));//1
-        System.out.println("3  0011 =" + Circuito2(0,0,1,1));//1
-        System.out.println("4  0100 =" + Circuito2(0,1,0,0));//1
+        System.out.println("0  0000 =" + Circuito2(0,0,0,0));
+        System.out.println("1  0001 =" + Circuito2(0,0,0,1));
+        System.out.println("2  0010 =" + Circuito2(0,0,1,0));
+        System.out.println("3  0011 =" + Circuito2(0,0,1,1));
+        System.out.println("4  0100 =" + Circuito2(0,1,0,0));
+        System.out.println("5  0101 =" + Circuito2(0,1,0,1));
+        System.out.println("6  0110 =" + Circuito2(0,1,1,0));
+        System.out.println("7  0111 =" + Circuito2(0,1,1,1));
+        System.out.println("8  1000 =" + Circuito2(1,0,0,0));
+        System.out.println("9  1001 =" + Circuito2(1,0,0,1));
         
     }
     public static void main(String[] args) {
