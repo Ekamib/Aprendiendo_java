@@ -1,0 +1,136 @@
+public class Main {
+
+    public static void main(String[] args) {
+        // === FUNCIONES MATEMÁTICAS (Math) ===
+        ejemploConstantesYBasicos();         // Uso de constantes como PI y funciones min/max
+        ejemploPotenciasYRaices();           // Potencias, raíz cuadrada y cúbica
+        ejemploProductos();                  // Producto exacto entre enteros
+        ejemploRandom();                     // Números aleatorios
+        ejemploRedondeo();                   // Redondeo con rint y round
+        ejemploConversionYTrigonometria();   // Conversión a radianes y funciones trigonométricas
+        separador();
+        // === FUNCIONES DE TEXTO (String) ===
+        ejemploToString();                   // Convertir double a String
+        ejemploToStringBoolean();            // Convertir boolean a String
+        ejemploCompareToMayor();             // Comparación lexicográfica (mayor)
+        ejemploCompareToMenor();             // Comparación lexicográfica (menor)
+        ejemploCompareToIgual();             // Comparación lexicográfica (igual)
+        ejemploEquals();                     // Comparar igualdad de cadenas
+        ejemploConcat();                     // Concatenar dos cadenas
+        ejemploLength();                     // Obtener longitud de una cadena
+        ejemploToUpperLowerCase();           // Convertir a mayúsculas y minúsculas
+        ejemploSubstring();                  // Extraer subcadena
+        ejemploTrim();                       // Eliminar espacios en blanco al inicio y final
+    }
+
+    // ===================== MATH =====================
+
+    //  Uso de constantes PI y funciones min/max
+    public static void ejemploConstantesYBasicos() {
+        System.out.println("Pi = " + Math.PI);
+        System.out.println("Minimo = " + Math.min(5.4, 3.2));
+        System.out.println("Maximo = " + Math.max(5.4, 3.2));
+    }
+
+    //  Potencias y raíces cuadradas/cúbicas
+    public static void ejemploPotenciasYRaices() {
+        System.out.println("Potencia 3 de 5 = " + Math.pow(5, 3));
+        System.out.println("Potencia 4 de 3 = " + Math.pow(3, 4));
+        System.out.println("Raiz cuadrada de 2 = " + Math.sqrt(2));
+        System.out.println("Raiz cubica de 27 = " + Math.cbrt(27));
+    }
+
+    //  Multiplicación exacta con enteros
+    public static void ejemploProductos() {
+        System.out.println("Producto (5,4) = " + Math.multiplyExact(5, 4));
+        System.out.println("Producto (15,12) = " + Math.multiplyExact(15, 12));
+    }
+
+    //  Generación de números aleatorios
+    public static void ejemploRandom() {
+        System.out.println("Random 1 = " + Math.random());
+        System.out.println("Random 2 = " + Math.random());
+        System.out.println("Random 3 = " + Math.random());
+        System.out.println("Random 4 = " + Math.random());
+    }
+
+    //  Redondeo con rint() y round()
+    public static void ejemploRedondeo() {
+        System.out.println("rint(7.8312) = " + Math.rint(7.8312));
+        System.out.println("rint(6.5) = " + Math.rint(6.5));
+        System.out.println("rint(7.5) = " + Math.rint(7.5));
+        System.out.println("rint(7.499) = " + Math.rint(7.499));
+        System.out.println("round(7.8) = " + Math.round(7.8));
+        System.out.println("round(6.5) = " + Math.round(6.5));
+        System.out.println("round(7.4999) = " + Math.round(7.4999));
+    }
+
+    //  Conversión de grados a radianes y funciones trigonométricas
+    public static void ejemploConversionYTrigonometria() {
+        System.out.println("30 grados = " + Math.toRadians(30));
+        System.out.println("45 grados = " + Math.toRadians(45));
+        System.out.println("90 grados = " + Math.toRadians(90));
+        System.out.println("Seno(30) = " + Math.sin(Math.toRadians(30)));
+        System.out.println("Seno(45) = " + Math.sin(Math.toRadians(45)));
+        System.out.println("Coseno(90) = " + Math.cos(Math.toRadians(90)));
+        System.out.println("Coseno(115) = " + Math.cos(Math.toRadians(115)));
+        System.out.println("Tangente(90) = " + Math.tan(Math.toRadians(90)));
+        System.out.println("Tangente(115) = " + Math.tan(Math.toRadians(115)));
+    }
+     //  Convertir número decimal a cadena
+    public static void separador() {
+        System.out.println("===============================================");
+    }
+    // ===================== STRING =====================
+
+    //  Convertir número decimal a cadena
+    public static void ejemploToString() {
+        String s = String.valueOf(3.141592);
+        System.out.println("toString (double): " + s);
+    }
+
+    //  Convertir valor booleano a cadena
+    public static void ejemploToStringBoolean() {
+        String s = String.valueOf(false);
+        System.out.println("toString (boolean): " + s);
+    }
+
+    //  Comparar cadenas (s1 > s2)
+    public static void ejemploCompareToMayor() {
+        String s1 = "casamiento";
+        String s2 = "casados";
+        int result = s1.compareTo(s2);
+        System.out.println("compareTo (mayor): " + result);
+    }
+
+    //  Comparar cadenas (s1 < s2)
+    public static void ejemploCompareToMenor() {
+        String s1 = "casados";
+        String s2 = "casamiento";
+        int result = s1.compareTo(s2);
+        System.out.println("compareTo (menor): " + result);
+    }
+
+    //  Comparar cadenas (s1 == s2)
+    public static void ejemploCompareToIgual() {
+        String s1 = "casados";
+        String s2 = "casados";
+        int result = s1.compareTo(s2);
+        System.out.println("compareTo (igual): " + result);
+    }
+
+    //  Comparar igualdad exacta entre cadenas
+    public static void ejemploEquals() {
+        String s1 = "casados";
+        String s2 = "casamiento";
+        boolean result = s1.equals(s2);
+        System.out.println("equals: " + result);
+    }
+
+    //  Concatenar dos cadenas
+    public static void ejemploConcat() {
+        String s1 = "Gato";
+        String s2 = "Irlandes";
+        String result = s1.concat(s2);
+        System.out.println("concat: " + result);
+    }
