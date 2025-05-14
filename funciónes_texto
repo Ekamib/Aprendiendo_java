@@ -1,0 +1,100 @@
+public class Main {
+
+    public static void main(String[] args) {
+        ejemploToString();
+        ejemploToStringBoolean();
+        ejemploCompareToMayor();
+        ejemploCompareToMenor();
+        ejemploCompareToIgual();
+        ejemploEquals();
+        ejemploConcat();
+        ejemploLength();
+        ejemploToUpperLowerCase();
+        ejemploSubstring();
+        ejemploTrim();
+    }
+
+    // 1️⃣ Convertir double a String
+    public static void ejemploToString() {
+        String s = String.valueOf(3.141592);
+        System.out.println("toString (double): " + s);
+    }
+
+    // 2️⃣ Convertir boolean a String
+    public static void ejemploToStringBoolean() {
+        String s = String.valueOf(false);
+        System.out.println("toString (boolean): " + s);
+    }
+
+    // 3️⃣ compareTo: s1 > s2
+    public static void ejemploCompareToMayor() {
+        String s1 = "casamiento";
+        String s2 = "casados";
+        int result = s1.compareTo(s2);
+        System.out.println("compareTo (mayor): " + result);
+    }
+
+    // 4️⃣ compareTo: s1 < s2
+    public static void ejemploCompareToMenor() {
+        String s1 = "casados";
+        String s2 = "casamiento";
+        int result = s1.compareTo(s2);
+        System.out.println("compareTo (menor): " + result);
+    }
+
+    // 5️⃣ compareTo: s1 == s2
+    public static void ejemploCompareToIgual() {
+        String s1 = "casados";
+        String s2 = "casados";
+        int result = s1.compareTo(s2);
+        System.out.println("compareTo (igual): " + result);
+    }
+
+    // 6️⃣ equals
+    public static void ejemploEquals() {
+        String s1 = "casados";
+        String s2 = "casamiento";
+        boolean result = s1.equals(s2);
+        System.out.println("equals: " + result);
+    }
+
+    // 7️⃣ concat
+    public static void ejemploConcat() {
+        String s1 = "Gato";
+        String s2 = "Irlandes";
+        String result = s1.concat(s2);
+        System.out.println("concat: " + result);
+    }
+
+    // 8️⃣ length
+    public static void ejemploLength() {
+        String s = "Otorinolaringolo";
+        int length = s.length();
+        System.out.println("length: " + length);
+    }
+
+    // 9️⃣ toUpperCase y toLowerCase
+    public static void ejemploToUpperLowerCase() {
+        String s = "EL CIELO es azul";
+        String upper = s.toUpperCase();
+        String lower = s.toLowerCase();
+        System.out.println("original: " + s);
+        System.out.println("toUpperCase: " + upper);
+        System.out.println("toLowerCase: " + lower);
+    }
+
+    // 🔟 substring
+    public static void ejemploSubstring() {
+        String s = "EL CIELO es azul";
+        String sub = s.substring(3, 8);
+        System.out.println("substring (3,8): " + sub);
+    }
+
+    // 1️⃣1️⃣ trim
+    public static void ejemploTrim() {
+        String s = "     EL CIELO es azul    ";
+        System.out.println("original: ***" + s + "***");
+        String trimmed = s.trim();
+        System.out.println("trimmed: **" + trimmed + "**");
+    }
+}
