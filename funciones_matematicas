@@ -1,0 +1,38 @@
+
+class Main {
+    
+ public static void main(String[] args) {
+    System.out.println("Pi="+Math.PI); 
+    System.out.println("Minimo="+Math.min(5.4, 3.2));
+    System.out.println("Maximo="+Math.max(5.4, 3.2)); 
+    System.out.println("Potencia 3 de 5 ="+Math.pow(5, 3)); 
+    System.out.println("Potencia 4 de 3 ="+Math.pow(3, 4));
+    System.out.println("Raiz cuadrada de 2 ="+Math.sqrt(2));
+    System.out.println("Raiz cubica de 27 ="+Math.cbrt(27));
+    System.out.println("Producto (5,4)  ="+Math.multiplyExact(5,4));
+    System.out.println("Producto (15,12)  ="+Math.multiplyExact(15,12));
+    System.out.println("Random () ="+Math.random());
+    System.out.println("Random () ="+Math.random());
+    System.out.println("Random () ="+Math.random());
+    System.out.println("Random () ="+Math.random());
+    System.out.println("7.8312 ="+Math.rint(7.8312));
+    System.out.println("6.5 ="+Math.rint(6.5));
+    System.out.println("7.5 ="+Math.rint(7.5));
+    System.out.println("7.5 ="+Math.rint(7.499));
+    System.out.println("7.8 ="+Math.round(7.8));
+    System.out.println("6.5 ="+Math.round(6.5));
+    System.out.println("7.499 ="+Math.round(7.4999));
+    System.out.println("30 grados ="+Math.toRadians(30));
+    System.out.println("45 grados ="+Math.toRadians(45));
+    System.out.println("90 grados ="+Math.toRadians(90));    
+    System.out.println("Seno de (30) ="+Math.sin(Math.toRadians(30)));
+    System.out.println("Seno de (45) ="+Math.sin(Math.toRadians(45)));
+    System.out.println("coseno de (90) ="+Math.cos(Math.toRadians(90)));   
+    System.out.println("coseno de (115) ="+Math.cos(Math.toRadians(115)));
+    System.out.println("tangente de (90) ="+Math.tan(Math.toRadians(90)));   
+    System.out.println("tangente de (115) ="+Math.tan(Math.toRadians(115)));  
+        
+        
+        
+    }// fin de la funcion main 
+}// fin de la clase
