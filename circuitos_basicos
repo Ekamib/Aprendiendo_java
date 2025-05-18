@@ -60,10 +60,23 @@ public class laboratorio3_circuitos1226 {
         System.out.println("0  0000 =" + Circuito1(0, 0, 0, 0));
         System.out.println("1  0001 =" + Circuito1(0, 0, 0, 1));
         System.out.println("2  0010 =" + Circuito1(0, 0, 1, 0));
+        System.out.println("3  0011 =" + Circuito2(0, 0, 1, 1));
+        System.out.println("4  0100 =" + Circuito2(0, 1, 0, 0));
+        System.out.println("5  0101 =" + Circuito2(0, 1, 0, 1));
+        System.out.println("6  0110 =" + Circuito2(0, 1, 1, 0));
+        System.out.println("7  0111 =" + Circuito2(0, 1, 1, 1));
+        System.out.println("8  1000 =" + Circuito2(1, 0, 0, 0));
+        System.out.println("9  1001 =" + Circuito2(1, 0, 0, 1));
+        System.out.println("10 1010 =" + Circuito2(1, 0, 1, 0));
+        System.out.println("11 1011 =" + Circuito2(1, 0, 1, 1));
+        System.out.println("12 1100 =" + Circuito2(1, 1, 0, 0));
+        System.out.println("13 1101 =" + Circuito2(1, 1, 0, 1));
+        System.out.println("14 1110 =" + Circuito2(1, 1, 1, 0));
+        System.out.println("15 1111 =" + Circuito2(1, 1, 1, 1));
+        
     }
 
-    // Descomenta si vas a usar PruebaCircuito2
-    /*
+    
     public static int Circuito2(int w, int x, int y, int z) {
         int s1, s2, s3, s4, s5, s6;
         s1 = NOT(x);
@@ -94,13 +107,14 @@ public class laboratorio3_circuitos1226 {
         System.out.println("14 1110 =" + Circuito2(1, 1, 1, 0));
         System.out.println("15 1111 =" + Circuito2(1, 1, 1, 1));
     }
-    */
+    
 
     public static void main(String[] args) {
-    
-        PruebaCircuito1();   
+         PruebaCircuito2();
+        PruebaCircuito1();    
         PruebadelAnd();
         PruebadelOR();
         PruebadelNOT();
     }
 }
+
