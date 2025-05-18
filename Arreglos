@@ -1,0 +1,108 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class Main {
+    public static void main(String[] args) {
+        Ejemplo1();
+        Ejemplo2();
+        Ejemplo3();
+        Ejemplo4(); // Puedes cambiar a Ejemplo1() o Ejemplo2() si lo deseas
+    } // Fin del main 
+
+    public static void Ejemplo1() {
+        System.out.println("***** Ejemplo 1 *****");
+        int[] A = new int[5];
+        A[0] = 87;
+        A[1] = 90;
+        A[2] = 93;
+        A[3] = 24;
+        A[4] = 35;
+
+        for (int k = 0; k <= 4; k++) {
+            System.out.println(A[k]);
+        } // Fin del ciclo k 
+    } // Fin del Ejemplo1
+
+    public static void Ejemplo2() {
+        System.out.println("***** Ejemplo 2 *****");
+        int[] A = {87, 90, 93, 24, 35}; // Corrección de sintaxis
+        int n = A.length;
+        System.out.println("Tamaño: " + n);
+
+        for (int k = 0; k < n; k++) { // Corrección: uso de ',' en vez de ';' estaba mal
+            System.out.println(A[k] + "\t");
+        } // Fin del ciclo k 
+
+        System.out.println("==========");
+        System.out.println("==============");
+    } // Fin del Ejemplo2
+
+    public static void Ejemplo3() {
+        System.out.println("***** Ejemplo 3 *****");
+        int[] A = {87, 90, 93, 24, 35}; // Corrección de sintaxis
+        int n = A.length;
+        double Promedio = 0.0;
+        int Suma = 0;
+
+        for (int x = 0; x < n; x++) {
+            Suma += A[x];
+        } // Fin del ciclo for 
+        Promedio = Suma*1.0/n;
+    
+        System.out.println("La suma es: " + Suma);
+        
+        System.out.println("Promedio" + Promedio);
+        System.out.println("====================");
+    } // Fin del Ejemplo3
+    
+    public static void Ejemplo4(){
+        System.out.println("***** Ejemplo 4 *****");
+        int Edad [] = {17,19,21,25,17,23,21,24,23,19,20,25,20,20,20,21,23,23,25,18};
+        int n=Edad.length;
+        
+        System.out.println("Tamaño" + n);
+        int c17=0,c18=0,c19=0,c20=0,c21=0,c22=0,c23=0,c24=0,c25=0;
+        int SumaEdad=0, SumaFrec=0;
+        
+        
+        for(int k=0; k<=n-1; k++){
+            if(Edad[k]==17){c17= c17+1;}
+            if(Edad[k]==18){c18= c18+1;}
+            if(Edad[k]==19){c19= c19+1;}
+            if(Edad[k]==20){c20= c20+1;}
+            if(Edad[k]==21){c21= c21+1;}
+            if(Edad[k]==22){c22= c22+1;}
+            if(Edad[k]==23){c23= c23+1;}
+            if(Edad[k]==24){c24= c24+1;}    
+            if(Edad[k]==25){c25= c25+1;}
+            
+            SumaEdad = SumaEdad + Edad[k];
+            
+        }//fin del ciclo k
+        SumaFrec = c17 + c18 + c19 + c20 + c21 + c22 + c23 + c24 + c25;
+        Promedio = SumaEdad*1.0/n;
+        
+        //salida
+        System.out.println("Edad" + "\t" + "frec");
+        System.out.println("17" + "\t" + c17);
+        System.out.println("18" + "\t" + c18);
+        System.out.println("19" + "\t" + c19);
+        System.out.println("20" + "\t" + c20);
+        System.out.println("21" + "\t" + c21);
+        System.out.println("22" + "\t" + c22);
+        System.out.println("23" + "\t" + c23);
+        System.out.println("24" + "\t" + c24);
+        System.out.println("25" + "\t" + c25);
+        System.out.println("==================");
+        System.out.println("Suma de frecuencia"  + "\t" + SumaFrec);
+        System.out.println("Promedio = "  + "\t" + Promedio);
+        
+        
+        
+        
+        
+       
+    }// fin del ejemplo 4 
+    
+    
+} // Fin de la clase
