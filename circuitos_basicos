@@ -2,119 +2,180 @@ package com.elvis.laboratorio3_circuitos1226;
 
 public class laboratorio3_circuitos1226 {
 
-    public static int And(int x, int y) {
+    public static int AND(int x, int y) {
         int z;
         z = x * y;
         return z;
-    }
+    }// fin AND 
 
-    public static void PruebadelAnd() {
+    public static void PruebadelAND() {
+        System.out.println("===================");
         System.out.println("****funcion And****");
-        System.out.println("0 and 0 =" + And(0, 0));
-        System.out.println("0 and 1 =" + And(0, 1));
-        System.out.println("1 and 0 =" + And(1, 0));
-        System.out.println("1 and 1 =" + And(1, 1));
-    }
+        System.out.println("===================");
+        System.out.println("0 and 0 =" + AND(0, 0));
+        System.out.println("0 and 1 =" + AND(0, 1));
+        System.out.println("1 and 0 =" + AND(1, 0));
+        System.out.println("1 and 1 =" + AND(1, 1));
+    }// fin prueba AND 
 
     public static int OR(int x, int y) {
         int z;
         z = x + y;
         if (z > 0) {
             z = 1;
-        }
+        }// fin if 
         return z;
-    }
+    }// Fin OR 
 
     public static void PruebadelOR() {
+        System.out.println("==================");
         System.out.println("****funcion OR****");
+        System.out.println("==================");
         System.out.println("0 and 0 =" + OR(0, 0));
         System.out.println("0 and 1 =" + OR(0, 1));
         System.out.println("1 and 0 =" + OR(1, 0));
         System.out.println("1 and 1 =" + OR(1, 1));
-    }
+    }// Fin prueba OR
 
     public static int NOT(int x) {
         int z = 0;
         if (x == 0) {
             z = 1;
-        }
+        }//fin if 
         return z;
-    }
+    }// fin NOT
 
     public static void PruebadelNOT() {
+        System.out.println("==================");
         System.out.println("***funcion NOT*****");
+        System.out.println("==================");
         System.out.println("0  =" + NOT(0));
-        System.out.println("0  =" + NOT(1));
-    }
+        System.out.println("1  =" + NOT(1));
+    }// fin prueba NOT
 
     public static int Circuito1(int w, int x, int y, int z) {
         int s1, s2, s3;
-        s1 = And(x, w);
-        s2 = And(y, z);
+        s1 = AND(x, w);
+        s2 = AND(y, z);
         s3 = OR(s2, s1);
         return s3;
-    }
+    }// fin del circuito 1 
 
     public static void PruebaCircuito1() {
-        System.out.println("****Prueba del circuito 1******");
-        System.out.println("0  0000 =" + Circuito1(0, 0, 0, 0));
-        System.out.println("1  0001 =" + Circuito1(0, 0, 0, 1));
-        System.out.println("2  0010 =" + Circuito1(0, 0, 1, 0));
-        System.out.println("3  0011 =" + Circuito2(0, 0, 1, 1));
-        System.out.println("4  0100 =" + Circuito2(0, 1, 0, 0));
-        System.out.println("5  0101 =" + Circuito2(0, 1, 0, 1));
-        System.out.println("6  0110 =" + Circuito2(0, 1, 1, 0));
-        System.out.println("7  0111 =" + Circuito2(0, 1, 1, 1));
-        System.out.println("8  1000 =" + Circuito2(1, 0, 0, 0));
-        System.out.println("9  1001 =" + Circuito2(1, 0, 0, 1));
-        System.out.println("10 1010 =" + Circuito2(1, 0, 1, 0));
-        System.out.println("11 1011 =" + Circuito2(1, 0, 1, 1));
-        System.out.println("12 1100 =" + Circuito2(1, 1, 0, 0));
-        System.out.println("13 1101 =" + Circuito2(1, 1, 0, 1));
-        System.out.println("14 1110 =" + Circuito2(1, 1, 1, 0));
-        System.out.println("15 1111 =" + Circuito2(1, 1, 1, 1));
-        
-    }
+        System.out.println("===================================");
+        System.out.println("****Prueba del circuito 1****");
+        System.out.println("===================================");
+        int Dec=-1; int s3=0;
+        System.out.println("Dec" + "\t" + "w" + "\t" + "x" + "\t" + "y" + "\t" + "z" + "\t" + "s3");
+        for(int w=0; w<=1; w++){
+            for(int x=0; x<=1; x++){
+               for(int y=0; y<=1; y++){
+                   for(int z=0; z<=1; z++){
+                     Dec = Dec + 1;
+                     s3 = Circuito1(w,x,y,z);
+                     System.out.println(Dec + "\t" + w + "\t" + x + "\t" + y + "\t" + z + "\t" + s3);
+                   }// fin del ciclo z
+               } // fin del ciclo y 
+            }//fin de ciclo x
+        }// fin del ciclo w 
+    }// fin prueba circuito1 
 
-    
     public static int Circuito2(int w, int x, int y, int z) {
         int s1, s2, s3, s4, s5, s6;
         s1 = NOT(x);
         s2 = NOT(y);
         s3 = NOT(z);
-        s4 = And(s1, w);
-        s5 = And(s2, s3);
+        s4 = AND(s1, w);
+        s5 = AND(s2, s3);
         s6 = OR(s4, s5);
         return s6;
-    }
+    }// fin del circuito2 
 
     public static void PruebaCircuito2() {
-        System.out.println("****Prueba del circuito 2******");
-        System.out.println("0  0000 =" + Circuito2(0, 0, 0, 0));
-        System.out.println("1  0001 =" + Circuito2(0, 0, 0, 1));
-        System.out.println("2  0010 =" + Circuito2(0, 0, 1, 0));
-        System.out.println("3  0011 =" + Circuito2(0, 0, 1, 1));
-        System.out.println("4  0100 =" + Circuito2(0, 1, 0, 0));
-        System.out.println("5  0101 =" + Circuito2(0, 1, 0, 1));
-        System.out.println("6  0110 =" + Circuito2(0, 1, 1, 0));
-        System.out.println("7  0111 =" + Circuito2(0, 1, 1, 1));
-        System.out.println("8  1000 =" + Circuito2(1, 0, 0, 0));
-        System.out.println("9  1001 =" + Circuito2(1, 0, 0, 1));
-        System.out.println("10 1010 =" + Circuito2(1, 0, 1, 0));
-        System.out.println("11 1011 =" + Circuito2(1, 0, 1, 1));
-        System.out.println("12 1100 =" + Circuito2(1, 1, 0, 0));
-        System.out.println("13 1101 =" + Circuito2(1, 1, 0, 1));
-        System.out.println("14 1110 =" + Circuito2(1, 1, 1, 0));
-        System.out.println("15 1111 =" + Circuito2(1, 1, 1, 1));
-    }
-    
+        System.out.println("===================================");
+        System.out.println("****Prueba del circuito 2****");
+        System.out.println("===================================");
+        int Dec=-1; int s6=0;
+        System.out.println("Dec" + "\t" + "w" + "\t" + "x" + "\t" + "y" + "\t" + "z" + "\t" + "s6");
+        for(int w=0; w<=1; w++){
+            for(int x=0; x<=1; x++){
+               for(int y=0; y<=1; y++){
+                   for(int z=0; z<=1; z++){
+                     Dec = Dec + 1;
+                     s6 = Circuito2(w,x,y,z);
+                     System.out.println(Dec + "\t" + w + "\t" + x + "\t" + y + "\t" + z + "\t" + s6);
+                   }// fin del ciclo z
+               } // fin del ciclo y 
+            }//fin de ciclo x
+        }// fin del ciclo w 
+    }// fin del circuito2 
+
+    public static int Circuito3(int w, int x, int y, int z) {
+        int s1, s2, s3, s4, s5, s6;
+        s1 = NOT(w);
+        s2 = NOT(x);
+        s3 = NOT(y);
+        s4 = AND(s1, s2);
+        s5 = AND(s3, z);
+        s6 = OR(s4, s5);
+        return s6;
+    }// fin del circuito3
+
+    public static void PruebaCircuito3() {
+        System.out.println("===================================");
+        System.out.println("****Prueba del circuito 3****");
+        System.out.println("===================================");
+        int Dec=-1; int s6=0;
+        System.out.println("Dec" + "\t" + "w" + "\t" + "x" + "\t" + "y" + "\t" + "z" + "\t" + "s6");
+        for(int w=0; w<=1; w++){
+            for(int x=0; x<=1; x++){
+               for(int y=0; y<=1; y++){
+                   for(int z=0; z<=1; z++){
+                     Dec = Dec + 1;
+                     s6 = Circuito3(w,x,y,z);
+                     System.out.println(Dec + "\t" + w + "\t" + x + "\t" + y + "\t" + z + "\t" + s6);
+                   }// fin del ciclo z
+               } // fin del ciclo y 
+            }//fin de ciclo x
+        }// fin del ciclo w 
+    }// fin circuito 3
+
+    public static int Circuito4(int w, int x, int y, int z) {
+        int s1,s2, s3, s4, s5;
+        s1 = NOT(w);
+        s2 = NOT(z);
+        s3 = AND(s1, x);
+        s4 = AND(s2, y);
+        s5 = OR(s4, s3);      
+        return s5;
+    }// fin del circuito 4
+
+    public static void PruebaCircuito4() {
+        System.out.println("===================================");
+        System.out.println("****Prueba del circuito 4****");
+        System.out.println("===================================");
+        int Dec = -1; int s5 = 0;
+        System.out.println("Dec" + "\t" + "w" + "\t" + "x" + "\t" + "y" + "\t" + "z" + "\t" + "s5");
+        for (int w = 0; w <= 1; w++) {
+            for (int x = 0; x <= 1; x++) {
+                for (int y = 0; y <= 1; y++) {
+                    for (int z = 0; z <= 1; z++) {
+                        Dec = Dec + 1;
+                        s5 = Circuito4(w, x, y, z);
+                        System.out.println(Dec + "\t" + w + "\t" + x + "\t" + y + "\t" + z + "\t" + s5);
+                    }// fin del ciclo z
+                } // fin del ciclo y 
+            }//fin de ciclo x
+        }// fin del ciclo w 
+    }// fin circuito 4
 
     public static void main(String[] args) {
-         PruebaCircuito2();
-        PruebaCircuito1();    
-        PruebadelAnd();
+        PruebaCircuito1(); 
+        PruebaCircuito2();
+        PruebaCircuito3();
+        PruebaCircuito4();
+        PruebadelAND();
         PruebadelOR();
         PruebadelNOT();
     }
 }
-
