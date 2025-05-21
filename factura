@@ -1,0 +1,44 @@
+class Main {
+    public static void main(String[] args) {
+        //declaracion de variables 
+
+        String cp[] = {"", "P01", "P02", "P03", "P04", "P05"};
+        String np[] = {"", "QUESO", "PAPAS", "MARGARINA", "HUEVOS", "CHILE(4oz"};
+        int c[] = {0, 3, 2, 1, 2, 3};
+        double p[] = {0, 47.50, 8.45, 9.30, 45.00, 7.20};
+        boolean g[] = {false, false, false, true, false, true};
+
+        double st[] = new double[20];
+        double imp[] = new double[20];
+        double t[] = new double[20];
+        double tp; // total a pagar 
+
+        //proceso 
+
+        tp = 0;
+        for (int k = 1; k <= 5; k++) {
+            st[k] = p[k] * c[k];
+            if (g[k] == true) {
+                imp[k] = st[k] * 0.15;
+            } else {
+                imp[k] = 0;
+            }
+            t[k] = st[k] + imp[k];
+            tp = tp + t[k];
+        } // fin del ciclo 
+
+        //salida 
+        String f1, f2, f3, f4, f5, f6, f7, f8, f;
+        f1 = "%-7s"; f2 = "%-15s"; f3 = "%-7d"; f4 = "%-9.2f"; 
+        f5 = "%-7b"; f6 = "%-9.2f"; f7 = "%-8.2f"; f8 = "%-9.2f"; 
+        f = f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8;
+
+        System.out.println("Cod     Producto        Cant   Precio   Grab   Subtot   Imp     Total");
+        System.out.println("======================================================================");
+        for (int k = 1; k <= 5; k++) {
+            System.out.format(f + "\n", cp[k], np[k], c[k], p[k], g[k], st[k], imp[k], t[k]);
+        } //fin del ciclo k 
+        System.out.println("======================================================================");
+        System.out.format("Total a pagar:\t\t\t\t\t\t\t\t\t\t\t\t\t%.2f\n", tp); // fin del programa main 
+    } //fin del laboratorio4 
+}
