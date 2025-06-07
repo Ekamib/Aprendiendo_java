@@ -1,44 +1,58 @@
-class Main {
-    public static void main(String[] args) {
-        //declaracion de variables 
+public class Main {
+  public static String[] cp = new String[10];     // Código del producto
+  public static String[] np = new String[10];     // Nombre del producto
+  public static int[] c = new int[10];            // Cantidad
+  public static double[] p = new double[10];      // Precio
+  public static boolean[] g = new boolean[10];    // Grava IVA
+  public static double[] st = new double[10];     // Subtotal
+  public static double[] imp = new double[10];    // Impuesto
+  public static double[] t = new double[10];      // Total por producto
+  public static double tp = 0;                    // Total general
 
-        String cp[] = {"", "P01", "P02", "P03", "P04", "P05"};
-        String np[] = {"", "QUESO", "PAPAS", "MARGARINA", "HUEVOS", "CHILE(4oz"};
-        int c[] = {0, 3, 2, 1, 2, 3};
-        double p[] = {0, 47.50, 8.45, 9.30, 45.00, 7.20};
-        boolean g[] = {false, false, false, true, false, true};
+  public static void GuardarRegistro(int i, String cod, String nombre, int cant, double precio, boolean grava) {
+    cp[i] = cod;
+    np[i] = nombre;
+    c[i] = cant;
+    p[i] = precio;
+    g[i] = grava;
+  } // fin del método GuardarRegistro
 
-        double st[] = new double[20];
-        double imp[] = new double[20];
-        double t[] = new double[20];
-        double tp; // total a pagar 
+  public static void Datos() {
+    GuardarRegistro(1, "P01", "QUESO", 3, 47.50, false);
+    GuardarRegistro(2, "P02", "PAPAS", 2, 8.45, false);
+    GuardarRegistro(3, "P03", "MARGARINA", 1, 9.30, true);
+    GuardarRegistro(4, "P04", "HUEVOS", 2, 45.00, false);
+    GuardarRegistro(5, "P05", "CHILE 40", 3, 7.20, true);
+  } // fin del método Datos
 
-        //proceso 
+  public static void Calculos() {
+    tp = 0;
+    for (int i = 1; i <= 5; i++) {
+      st[i] = c[i] * p[i];
+      imp[i] = g[i] ? st[i] * 0.15 : 0;
+      t[i] = st[i] + imp[i];
+      tp += t[i];
+    } // fin del ciclo for
+  } // fin del método Calculos
 
-        tp = 0;
-        for (int k = 1; k <= 5; k++) {
-            st[k] = p[k] * c[k];
-            if (g[k] == true) {
-                imp[k] = st[k] * 0.15;
-            } else {
-                imp[k] = 0;
-            }
-            t[k] = st[k] + imp[k];
-            tp = tp + t[k];
-        } // fin del ciclo 
+  public static void ImprimeRegistro(int i) {
+    String formato = "%-7s%-15s%-7d%-9.2f%-7b%-9.2f%-8.2f%-9.2f\n";
+    System.out.printf(formato, cp[i], np[i], c[i], p[i], g[i], st[i], imp[i], t[i]);
+  } // fin del método ImprimeRegistro
 
-        //salida 
-        String f1, f2, f3, f4, f5, f6, f7, f8, f;
-        f1 = "%-7s"; f2 = "%-15s"; f3 = "%-7d"; f4 = "%-9.2f"; 
-        f5 = "%-7b"; f6 = "%-9.2f"; f7 = "%-8.2f"; f8 = "%-9.2f"; 
-        f = f1 + f2 + f3 + f4 + f5 + f6 + f7 + f8;
+  public static void ImprimeTabla() {
+    System.out.println("Cod     Producto        Cant   Precio   Grab   Subtot   Imp     Total");
+    System.out.println("======================================================================");
+    for (int i = 1; i <= 5; i++) {
+      ImprimeRegistro(i);
+    } // fin del ciclo for
+    System.out.println("======================================================================");
+    System.out.printf("Total a pagar:%63.2f\n", tp);
+  } // fin del método ImprimeTabla
 
-        System.out.println("Cod     Producto        Cant   Precio   Grab   Subtot   Imp     Total");
-        System.out.println("======================================================================");
-        for (int k = 1; k <= 5; k++) {
-            System.out.format(f + "\n", cp[k], np[k], c[k], p[k], g[k], st[k], imp[k], t[k]);
-        } //fin del ciclo k 
-        System.out.println("======================================================================");
-        System.out.format("Total a pagar:\t\t\t\t\t\t\t\t\t\t\t\t\t%.2f\n", tp); // fin del programa main 
-    } //fin del laboratorio4 
-}
+  public static void main(String[] args) {
+    Datos();        // Cargar datos
+    Calculos();     // Procesar cálculos
+    ImprimeTabla(); // Mostrar resultados
+  } // fin del método main
+} // fin de la clase Main
