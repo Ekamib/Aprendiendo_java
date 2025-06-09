@@ -1,0 +1,150 @@
+
+public class EjerciciosArreglos {
+
+    // Declaración del arreglo A con 10 elementos enteros
+    static int A[] = {24, 39, 19, 36, 22, 57, 91, 16, 73, 45};
+
+    // 1. Imprimir todos los números del arreglo
+    public static void imprimirArreglo() {
+        System.out.print("Números del arreglo: ");
+        for (int num : A) {
+            System.out.print(num + " ");
+        }// fin del ciclo for 
+        System.out.println();
+    }// fin de imprimir arreglo 
+
+    // 2. Sumar todos los números del arreglo
+    public static void sumaTotal() {
+        int suma = 0;
+        for (int num : A) {
+            suma += num;
+        }// fin del ciclo for 
+        System.out.println("Suma total: " + suma);
+    }// fin de suma total
+
+    // 3. Imprimir los números pares del arreglo
+    public static void imprimirPares() {
+        System.out.print("Números pares: ");
+        for (int num : A) {
+            if (num % 2 == 0) {
+                System.out.print(num + " ");
+            }// fin del if 
+        }// fin del for 
+        System.out.println();
+    }// fin de imprimir pares 
+
+    // 4. Imprimir los números impares del arreglo
+    public static void imprimirImpares() {
+        System.out.print("Números impares: ");
+        for (int num : A) {
+            if (num % 2 != 0) {
+                System.out.print(num + " ");
+            }// fin del if 
+        }// fin del for 
+        System.out.println();
+    }// fin de imprimir impares 
+
+    // 5. Contar cuántos números pares hay en el arreglo
+    public static void contarPares() {
+        int contador = 0;
+        for (int num : A) {
+            if (num % 2 == 0) {
+                contador++;
+            }// fin del if 
+        }// fin del for 
+        System.out.println("Cantidad de números pares: " + contador);
+    }// fin de contar pares 
+
+    // 6. Contar cuántos números impares hay en el arreglo
+    public static void contarImpares() {
+        int contador = 0;
+        for (int num : A) {
+            if (num % 2 != 0) {
+                contador++;
+            }// fin del if 
+        }// fin del for 
+        System.out.println("Cantidad de números impares: " + contador);
+    }// fin de contar impares 
+
+    // 7. Sumar todos los números pares del arreglo
+    public static void sumaPares() {
+        int suma = 0;
+        for (int num : A) {
+            if (num % 2 == 0) {
+                suma += num;
+            }// fin del if 
+        }// fin del for 
+        System.out.println("Suma de los números pares: " + suma);
+    }// fin de suma pares 
+
+    // 8. Sumar todos los números impares del arreglo
+    public static void sumaImpares() {
+        int suma = 0;
+        for (int num : A) {
+            if (num % 2 != 0) {
+                suma += num;
+            }// fin del if 
+        }// fin del for 
+        System.out.println("Suma de los números impares: " + suma);
+    }// fin de suma impares 
+
+    // 9. Imprimir los números del arreglo en orden inverso
+    public static void imprimirInverso() {
+        System.out.print("Arreglo en orden inverso: ");
+        for (int i = A.length - 1; i >= 0; i--) {
+            System.out.print(A[i] + " ");
+        }// fin del for 
+        System.out.println();
+    }// fin de imprimir inverso 
+
+    // 10. Imprimir los números del arreglo que son divisibles por 3
+    public static void imprimirDiv3() {
+        System.out.print("Números divisibles por 3: ");
+        for (int num : A) {
+            if (num % 3 == 0) {
+                System.out.print(num + " ");
+            }// fin del if 
+        }// fin del for 
+        System.out.println();
+    }// fin de imprimir divisibles por 3 
+
+    // 11. Contar cuántos números son divisibles por 3
+    public static void contarDiv3() {
+        int contador = 0;
+        for (int num : A) {
+            if (num % 3 == 0) {
+                contador++;
+            }// fin del if 
+        }// fin del for 
+        System.out.println("Cantidad de números divisibles por 3: " + contador);
+    }// fin de contar divisibles por 3 
+
+    // 12. Sumar todos los números del arreglo que son divisibles por 3
+    public static void sumaDiv3() {
+        int suma = 0;
+        for (int num : A) {
+            if (num % 3 == 0) {
+                suma += num;
+            }// fin del if 
+        }// fin del for 
+        System.out.println("Suma de los números divisibles por 3: " + suma);
+    }// fin de suma divisibles por 3 
+
+    // Método principal para ejecutar todos los ejercicios
+    public static void main(String[] args) {
+        imprimirArreglo();
+        sumaTotal();
+        imprimirPares();
+        imprimirImpares();
+        contarPares();
+        contarImpares();
+        sumaPares();
+        sumaImpares();
+        imprimirInverso();
+        imprimirDiv3();
+        contarDiv3();
+        sumaDiv3();
+    }// fin del método main 
+}// fin de la clase EjerciciosArreglos
+
+
