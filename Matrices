@@ -1,0 +1,59 @@
+
+public class OperacionesMatrices {
+
+    // Método para imprimir una matriz
+    public static void ImprimeMatriz(int[][] matriz) {
+        for (int fila = 0; fila < matriz.length; fila++) {
+            for (int col = 0; col < matriz[fila].length; col++) {
+                System.out.print(matriz[fila][col] + "\t");
+            }
+            System.out.println(); // salto de línea
+        }// fin del ciclo for 
+    }// fin de imprime matriz 
+
+    // Método para sumar dos matrices
+    public static int[][] SumaMatrices(int[][] X, int[][] Y) {
+        int filas = X.length;
+        int columnas = X[0].length;
+
+        int[][] resultado = new int[filas][columnas];
+
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                resultado[i][j] = X[i][j] + Y[i][j];
+            }// fin del ciclo j 
+        }// fin del ciclo i 
+
+        return resultado;
+    }// fin de suma de matrices 
+    
+
+    // Método principal (main)
+    public static void main(String[] args) {
+        int[][] A = {
+            {87, 91, 74, 60},
+            {45, 73, 29, 35},
+            {39, 82, 57, 19},
+            {54, 17, 61, 52}
+        };// fin de matris A
+
+        int[][] B = {
+            {80, 90, 70, 60},
+            {40, 75, 20, 35},
+            {30, 85, 50, 10},
+            {55, 15, 65, 45}
+        };// Fin de matris B 
+
+        System.out.println("Matriz A:");
+        ImprimeMatriz(A);
+
+        System.out.println("\nMatriz B:");
+        ImprimeMatriz(B);
+
+        int[][] suma = SumaMatrices(A, B);
+        System.out.println("\nMatriz A + B:");
+        ImprimeMatriz(suma);
+    }// fin del main 
+}// fin de la clase operacionmatrices
+
+
