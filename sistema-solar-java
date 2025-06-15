@@ -1,0 +1,38 @@
+
+class practica_sistemasolar {
+    public static String Dato[]= new String[15];
+    public static int Sig[]= new int[15];
+    public static int Ant[]= new int[15];
+    
+    public static void GuardarRegistro(int k, int a, String d, int s){
+        Ant [k]= a;
+        Dato [k]= d;
+        Sig[k]= s;
+        
+    }// fin del metodo guardarregistro
+    
+    public static void Datos(){
+    GuardarRegistro(1,7,"Saturno",8);
+    GuardarRegistro(2,6,"Marte",7);
+    GuardarRegistro(3,0,"Mercurio",5);
+    GuardarRegistro(4,8,"Neptuno",0);
+    GuardarRegistro(5,3,"Venus",6);
+    GuardarRegistro(6,5,"La tierra",2);
+    GuardarRegistro(7,2,"Jupiter",1);
+    GuardarRegistro(8,1,"Urano",4);
+    }// fin del metodo Datos
+    public static void main(String[] args) {
+        Datos();
+        int p=3;
+        for (int k=1; k<=8; k++){
+            System.out.println(Dato[p]);
+            p = Sig[p];
+        }//fin del ciclo for
+        System.out.println("====================");
+        p=4;
+        for(int k=1; k<=8; k++){
+            System.out.println(Dato[p]);
+            p =Ant[p];
+        }// fin del ciclo for 
+    }//fin del funcion main 
+}//fin de la clase sistema solar 
