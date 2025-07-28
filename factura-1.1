@@ -1,0 +1,60 @@
+// Importamos clases necesarias para trabajar con listas dinámicas
+import java.util.ArrayList; // Clase que permite crear listas con tamaño variable
+import java.util.List;      // Interfaz que define el comportamiento general de una lista
+// Clase que representa un producto de una tienda
+class Producto {
+    private String codProd;
+    private String nomProd;
+    private int cantidad;
+    private double precio;
+    private boolean grab;
+
+    // Constructor del producto
+    public Producto(String codProd, String nomProd, int cantidad, double precio, boolean grab) {
+        this.codProd = codProd;
+        this.nomProd = nomProd;
+        this.cantidad = cantidad;
+        this.precio = precio;
+        this.grab = grab;
+    }//  fin del constructor producto  
+
+    // Imprime la información de un producto
+    public void imprimeRegistro() {
+        System.out.printf("%-6s %-15s %8d %10.2f %8s\n", codProd, nomProd, cantidad, precio, grab);
+    }// fin del imprime registro 
+
+    // Devuelve los datos en formato CSV (para guardar si quieres)
+    public String guardaRegistro() {
+        return codProd + "," + nomProd + "," + cantidad + "," + precio + "," + grab;
+    }// fin de guardar registro 
+}// fin de la clase producto 
+
+// Clase principal con el método main()
+public class Main {
+    // Lista donde se guardan los productos
+    private static List<Producto> productos = new ArrayList<>();
+
+    // Cargar productos
+    public static void datos() {
+        productos.add(new Producto("P01", "QUESO", 3, 47.50, false));
+        productos.add(new Producto("P02", "PAPAS", 2, 8.45, false));
+        productos.add(new Producto("P03", "MARGARINA", 1, 9.30, true));
+        productos.add(new Producto("P04", "HUEVOS", 2, 45.00, false));
+        productos.add(new Producto("P05", "CHILE(4 OZ)", 3, 7.20, true));
+    }// fin de la clase main 
+
+    // Imprimir tabla
+    public static void imprimeTabla() {
+        System.out.printf("%-6s %-15s %8s %10s %8s\n", "COD", "PRODUCTO", "CANTIDAD", "PRECIO", "GRAV");
+        System.out.println("-----------------------------------------------------------");
+        for (Producto p : productos) {
+            p.imprimeRegistro();
+        }// fin del for 
+    }// fin del metodo imprime tabla 
+
+    // Método principal
+    public static void main(String[] args) {
+        datos();         // Cargar productos
+        imprimeTabla();  // Mostrar productos
+    }// fin del main 
+}
