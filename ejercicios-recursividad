@@ -1,0 +1,51 @@
+public class EjerciciosRecursivos {
+
+    // Ejercicio 1: Saludo y A todos usando recursión
+    public static void Saludo(int n) {
+        if (n > 5) return;
+
+        // Parte descendente
+        System.out.println("Buenos días " + n);
+        Saludo(n + 1);
+        // Parte ascendente (regreso)
+        System.out.println("A todos " + n);
+    }// fin ejercicio 1
+
+    // Ejercicio 2: Imprimir números del 13 al 17
+    public static void Incremento(int n) {
+        if (n > 17) return;
+        System.out.println(n);
+        Incremento(n + 1);
+    }// fin ejercicio 2
+
+    // Ejercicio 3: Imprimir arreglo recursivamente
+    public static void ImprimeArreglo(int[] A, int i) {
+        if (i >= A.length) return;
+        System.out.println(A[i]);
+        ImprimeArreglo(A, i + 1);
+    }// fin ejercicio 3 
+
+    // Ejercicio 4: Calcular factorial recursivamente
+    public static int factorial(int n) {
+        if (n <= 1) return 1;
+        return n * factorial(n - 1);
+    }// fin ejercicio 4
+
+    // Método principal para ejecutar todos los ejercicios
+    public static void main(String[] args) {
+        System.out.println("=== Ejercicio 1 ===");
+        Saludo(1);  // Imprime de 1 a 5 y luego de 5 a 1
+
+        System.out.println("\n=== Ejercicio 2 ===");
+        Incremento(13);  // Imprime del 13 al 17
+
+        System.out.println("\n=== Ejercicio 3 ===");
+        int[] A = {5, 8, 4, 20, 19};
+        ImprimeArreglo(A, 0);  // Imprime cada elemento
+
+        System.out.println("\n=== Ejercicio 4 ===");
+        int num = 5;
+        int resultado = factorial(num);
+        System.out.println("El factorial de " + num + " es: " + resultado);
+    }// fin del metodo principal 
+}// fin de la clase 
